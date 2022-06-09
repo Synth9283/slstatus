@@ -69,6 +69,7 @@ static const struct arg args[] = {
     //{ run_command, ": %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
     { cpu_perc, "[CPU  %s%%] ", NULL	      },
     { ram_perc, "[RAM  %s%%] ", NULL	      },
+    { run_command, "[GPU %s%%] ", "nvidia-settings -q GPUUtilization -t | cut -d '=' -f 2 | sed 's/,.*$//'" },
     { run_command, "[%s] ", "curl wttr.in/?format=1"   },
     { datetime, "[%s]",           "%a %b %d %T" },
 };
