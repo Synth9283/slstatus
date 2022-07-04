@@ -71,5 +71,6 @@ static const struct arg args[] = {
     { ram_perc, "[RAM  %s%%] ", NULL	      },
     { run_command, "[GPU %s%%] ", "nvidia-settings -q GPUUtilization -t | cut -d '=' -f 2 | sed 's/,.*$//'" },
     { run_command, "[%s] ", "curl wttr.in/?format=1"   },
+    { battery_perc, "[BATT %s%%] ", "BAT1"     },
     { datetime, "[%s]",           "%a %b %d %T" },
 };
